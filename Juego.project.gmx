@@ -66,6 +66,7 @@
       <sprite>sprites\spr_bag</sprite>
       <sprite>sprites\spr_flowerPot</sprite>
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_powerup_pelotaR</sprite>
     </sprites>
     <sprites name="Actions">
       <sprite>sprites\spr_meleeAttack</sprite>
@@ -87,6 +88,7 @@
       <object>objects\obj_bush</object>
       <object>objects\obj_powerup</object>
       <object>objects\obj_wall</object>
+      <object>objects\obj_powerup_pelotaR</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cnt_levelGeneration</object>
