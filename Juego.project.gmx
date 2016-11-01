@@ -80,9 +80,10 @@
     <font>fonts\fnt_clock</font>
   </fonts>
   <objects name="objects">
-    <objects name="Players">
-      <object>objects\obj_player</object>
+    <objects name="Characters">
+      <object>objects\obj_character</object>
       <object>objects\obj_principal</object>
+      <object>objects\obj_player</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_bush</object>
@@ -92,6 +93,7 @@
     </objects>
     <objects name="Controllers">
       <object>objects\cnt_levelGeneration</object>
+      <object>objects\cnt_main</object>
     </objects>
     <objects name="Actions">
       <object>objects\obj_meleeAttack</object>

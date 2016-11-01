@@ -29,7 +29,7 @@
 with(other)
 {
 powerup = "pelotaR";
-alarm[0] = 300;
+alarm[0] = room_speed*20;
 }
 
 instance_destroy();
