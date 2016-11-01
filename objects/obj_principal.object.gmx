@@ -40,9 +40,10 @@
           <argument>
             <kind>1</kind>
             <string>///Melee Attack
-if(keyboard_check(action)){
+if(keyboard_check_pressed(action)){
     melee = instance_create(x,y,obj_meleeAttack);
     melee.angle = angle;
+    melee.image_angle=angle;
 }
 </string>
           </argument>

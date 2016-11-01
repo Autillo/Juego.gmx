@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
-image_angle = 270;
 </string>
           </argument>
         </arguments>
@@ -49,9 +48,8 @@ image_angle = 270;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = angle+180;
-angle -= 6;
-if(angle&lt;angle+180) instance_destroy();
+            <string>image_angle -=6;
+if(angle_difference(angle,image_angle)==174) instance_destroy();
 
 </string>
           </argument>
