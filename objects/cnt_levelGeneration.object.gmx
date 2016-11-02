@@ -32,7 +32,7 @@ randomize();
 
 //Read a random level layout file and create the instances
 file = file_text_open_read(working_directory + "\Levels\lvl" + string(irandom(LEVELS-1)+1) +".txt");
-iden = 1;
+iden = 0;
 for(j=0;j&lt;HEIGHT+2;j++){
     for(i=0; i&lt;WIDTH+2;i++){
         value = file_text_read_real(file);
@@ -44,8 +44,8 @@ for(j=0;j&lt;HEIGHT+2;j++){
                 instance_create((i)*CELL_WIDTH,(j+1)*CELL_HEIGHT,obj_powerup);
                 break;
             case 3:
-                players[iden-1] = instance_create(32+(i)*CELL_WIDTH,32+(j+1)*CELL_HEIGHT,obj_player);
-                players[iden-1].identifier = iden;
+                players[iden] = instance_create(32+(i)*CELL_WIDTH,32+(j+1)*CELL_HEIGHT,obj_player);
+                players[iden].identifier = iden+1;
                 iden++;
                 break;
             case 4:

@@ -66,6 +66,8 @@ if (vspeed!=0 and !place_free(x,y+vspeed)){
     if vspeed &lt; 0 move_contact_solid(90,-vspeed);
     vspeed = 0;
 }
+
+
 </string>
           </argument>
         </arguments>
