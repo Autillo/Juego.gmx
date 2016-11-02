@@ -30,6 +30,7 @@
 with(other){
     instance_change(obj_principal,false);
     identifier = "principal";
+    cd=false;
 }
 with(obj_powerup){
     instance_destroy();
