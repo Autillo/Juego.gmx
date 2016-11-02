@@ -93,23 +93,24 @@ if(vspeed == 0 and hspeed == 0){
 }
 else{
     image_speed = 1;
-    if(vspeed&gt;0){
-        //sprite_index = asset_get_index("spr_p"+string(identifier)+"_down");
-        angle = 270;
-    }
-    else if(vspeed&lt;0){
-        //sprite_index = asset_get_index("spr_p"+string(identifier)+"_up");
-        angle = 90;
-    }
-    else if(hspeed&gt;0){
-        //sprite_index = asset_get_index("spr_p"+string(identifier)+"_right");
-        angle = 0;
-    }
-    else if(hspeed&lt;0){
-        //sprite_index = asset_get_index("spr_p"+string(identifier)+"_left");
-        angle = 180;
-    }
 }
+if(keyboard_check(down)){
+    //sprite_index = asset_get_index("spr_p"+string(identifier)+"_down");
+    angle = 270;
+}
+else if(keyboard_check(up)){
+    //sprite_index = asset_get_index("spr_p"+string(identifier)+"_up");
+    angle = 90;
+}
+else if(keyboard_check(right)){
+    //sprite_index = asset_get_index("spr_p"+string(identifier)+"_right");
+    angle = 0;
+}
+else if(keyboard_check(left)){
+    //sprite_index = asset_get_index("spr_p"+string(identifier)+"_left");
+    angle = 180;
+}
+
 image_angle = angle;
 </string>
           </argument>
