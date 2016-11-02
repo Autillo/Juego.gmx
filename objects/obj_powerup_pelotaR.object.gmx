@@ -25,11 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Give 5 seconds of powerup
-with(other)
-{
-powerup = "pelotaR";
-alarm[0] = room_speed*20;
+            <string>///Give 20 seconds of powerup
+with(other) {
+    powerup = "pelotaR";
+    alarm[0] = room_speed*20;
 }
 
 instance_destroy();

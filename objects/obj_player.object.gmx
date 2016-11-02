@@ -67,6 +67,7 @@ powerup = "none";
             <string>///Restore default no-powerup state
 powerup = "none";
 sprite_index = asset_get_index("spr_p"+string(identifier));
+walkingSpeed = 5;
 </string>
           </argument>
         </arguments>
@@ -106,13 +107,15 @@ sprite_index = asset_get_index("spr_p"+string(identifier));
             <string>///Powerup behaviour
 
 //Pelota Rebotona
-if(powerup == "pelotaR" and keyboard_check_pressed(action))
-{
-        if (keyboard_check(right) and place_free(x+112,y) and place_meeting(x+1,y,obj_bush)) x+=112;    
-        else if (keyboard_check(left) and place_free(x-112,y) and place_meeting(x-1,y,obj_bush)) x-=112;      
+if(powerup == "pelotaR" and keyboard_check_pressed(action)) {
+    if (keyboard_check(right) and place_free(x+112,y) and place_meeting(x+1,y,obj_bush)) x+=112;    
+    else if (keyboard_check(left) and place_free(x-112,y) and place_meeting(x-1,y,obj_bush)) x-=112;      
 
-        else if (keyboard_check(down) and place_free(x,y+112)and place_meeting(x,y+1,obj_bush)) y+=112; 
-        else if (keyboard_check(up) and place_free(x,y-112)and place_meeting(x,y-1,obj_bush)) y-=112;       
+    else if (keyboard_check(down) and place_free(x,y+112)and place_meeting(x,y+1,obj_bush)) y+=112; 
+    else if (keyboard_check(up) and place_free(x,y-112)and place_meeting(x,y-1,obj_bush)) y-=112;       
+}
+else if(powerup == "patty" and keyboard_check_released(action)) {
+    walkingSpeed += 5;
 }
 </string>
           </argument>
@@ -137,20 +140,22 @@ if(powerup == "pelotaR" and keyboard_check_pressed(action))
           <argument>
             <kind>1</kind>
             <string>//Collision with other player
-if(image_angle == 0){
-    x -= 10;
-    //other.x += 10;
-}else if(image_angle == 180){
-    x += 10;
-    //other.x -= 10;
-}else if(image_angle == 90){
-    y -= 10;
-    //other.y += 10;
+
+if(other.x &lt; x and !place_free(x+15,y)){
+    move_contact_solid(0,15);
+    //x += 15;
 }else{
-    y += 10;
-    //other.y -= 10;  
+    move_contact_solid(180,15);
+    //x -= 15;
 }
 
+if(other.y &lt; y){
+    move_contact_solid(90,15);
+    //y += 15;
+}else{
+    move_contact_solid(270,15);
+    //y -= 15;
+}
 </string>
           </argument>
         </arguments>
