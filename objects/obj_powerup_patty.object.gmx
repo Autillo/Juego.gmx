@@ -27,10 +27,10 @@
             <kind>1</kind>
             <string>///Give 10 seconds of powerup
 with(other) {
-    powerup = "patty";
-    alarm[0] = room_speed*10;
+    powerup = "patty";    
+    //we can't lose the powerup after 10 sec if it hasn't been used
+    //alarm[0] it's not triggered here
 }
-
 instance_destroy();
 </string>
           </argument>

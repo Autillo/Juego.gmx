@@ -116,6 +116,9 @@ if(powerup == "pelotaR" and keyboard_check_pressed(action)) {
 }
 else if(powerup == "patty" and keyboard_check_pressed(action)) {
     walkingSpeed += 5;
+    //remember that this powerup is usable only once
+    powerup = "none";
+    alarm[0] = room_speed*10;
 }
 </string>
           </argument>
