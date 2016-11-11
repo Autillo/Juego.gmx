@@ -68,6 +68,7 @@
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_powerup_pelotaR</sprite>
       <sprite>sprites\spr_powerup_patty</sprite>
+      <sprite>sprites\spr_mustache</sprite>
     </sprites>
     <sprites name="Actions">
       <sprite>sprites\spr_meleeAttack</sprite>
@@ -92,6 +93,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_powerup_pelotaR</object>
       <object>objects\obj_powerup_patty</object>
+      <object>objects\obj_powerup_mustache</object>
     </objects>
     <objects name="Controllers">
       <object>objects\cnt_levelGeneration</object>

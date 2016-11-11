@@ -120,6 +120,7 @@ else if(powerup == "patty" and keyboard_check_pressed(action)) {
     powerup = "none";
     alarm[0] = room_speed*10;
 }
+
 </string>
           </argument>
         </arguments>
