@@ -75,11 +75,7 @@ if(angle_difference(angle,image_angle)==171) instance_destroy();
             <kind>1</kind>
             <string>///Destroy the player
 with(other){
-
-    if(powerup != "mustache")
-    {
-        instance_destroy();
-    }
+instance_destroy();
 }
 </string>
           </argument>
