@@ -54,6 +54,9 @@ for(j=0;j&lt;HEIGHT+2;j++){
             case 5:
                 instance_create((i)*CELL_WIDTH,(j+1)*CELL_HEIGHT,obj_powerup_patty);
                 break;
+            case 6:
+                instance_create((i)*CELL_WIDTH,(j+1)*CELL_HEIGHT,obj_door);
+                break;
         }
     } 
 }
